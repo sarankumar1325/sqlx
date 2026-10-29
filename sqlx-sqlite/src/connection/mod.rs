@@ -447,7 +447,7 @@ impl LockedSqliteHandle<'_> {
     /// The preupdate hook only fires for changes to real database tables;
     /// it is not invoked for changes to virtual tables or to system tables like sqlite_sequence or sqlite_stat1.
     ///
-    /// See https://sqlite.org/c3ref/preupdate_count.html
+    /// See https://sqlite.org/c3ref/preupdate_blobwrite.html
     #[cfg(feature = "preupdate-hook")]
     pub fn set_preupdate_hook<F>(&mut self, callback: F)
     where
